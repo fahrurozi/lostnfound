@@ -1,0 +1,211 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Reporting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link href="img/L&F.png" rel="icon">
+    <link href="img/L&F.png" rel="apple-touch-icon">
+  </head>
+  <body>
+    <div class="con">
+        <div class="brand">
+            <a href="../index.html"><img src="img/lostnfound.png" alt="logo"></a>
+        </div>
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <div class="card mt-2 mx-auto p-4 bg-light">
+            <h5>Detail Barang</h5>
+            <div class="card-body bg-light">
+              <div class="container">
+                <form id="contact-form" role="form">
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_barang">Jenis Barang *</label>
+                          <input id="form_barang" type="text" name="barang" class="form-control" placeholder="Contoh : Laptop" required="required" data-error="Masukkan Jenis Barang">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_model">Merek/Model *</label>
+                          <input id="form_model" type="text" name="model" class="form-control" placeholder="Contoh : Acer Extensia 15" required="required" data-error="Lastname is required.">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_kategori">Kategori *</label>
+                          <select id="form_kategori" name="kategori" class="form-control" required="required" data-error="Please specify your need.">
+                            <option selected disabled>--Pilih--</option>
+                            <option>Sangat Penting</option>
+                            <option>Penting</option>
+                            <option>Biasa</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_warna">Warna</label>
+                          <input id="form_warna" type="text" name="warna" class="form-control" placeholder="Contoh : Hitam" required="required" data-error="Valid email is required.">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="form_deskripsi">Detail Deskripsi *</label>
+                          <textarea id="form_deskripsi" name="deskripsi" class="form-control" placeholder="Deskripsikan lebih detail. Anda tidak perlu menulis tentang situasi kehilangan dalam formulir ini." rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Tanggal dan Lokasi-->
+                    <hr style="height: 3px;">
+                    <h5>Tanggal dan Lokasi</h5>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_tanggal">Tanggal kehilangan</label>
+                          <input id="form_tanggal" type="date" name="tanggal" class="form-control" required="required" data-error="Harap isi tanggal">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_waktu">Perkiraan Waktu *</label>
+                          <div class="col-md-6">
+                            <input id="form_waktu" type="time" name="waktu" class="form-control" required="required" data-error="Harap isi waktu">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="form_lokasi">Lokasi *</label>
+                          <select id="form_lokasi" name="lokasi" class="form-control" required="required" data-error="Harap pilih lokasi">
+                            <option value selected>--Pilih--</option>
+                            <option value="1" style="vertical-align: inherit;">Stasiun</option>
+                            <option value="2" style="vertical-align: inherit;">Kereta</option>
+                            <option value="3" style="vertical-align: inherit;">- TIdak Tercantum -</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label for="form_nama_lokasi">Nama Lokasi *</label>
+                          <input id="form_nama_lokasi" type="text" name="nama_lokasi" class="form-control" placeholder="Contoh : Gerbong, Masjid, Kantin" required="required" data-error="Harap isi detail lokasi">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="form-detail-lokasi">Detail Lokasi *</label>
+                          <textarea id="form-detail-lokasi" name="detail-lokasi" class="form-control" placeholder="Contoh : Nomor gerbong, nomor kursi, detail lokasi hilang." rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Alamat dan Kontak-->
+                    <hr style="height: 3px;">
+                    <h5>Alamat dan Kontak</h5>
+                    <br>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <label for="form_quest">Apakah Anda masih berada di Yogyakarta ?</label>
+                        <div class="col-md-6 form-check-inline">
+                          <input id="form_quest" type="radio" name="quest" class="form-check-input" required="required" data-error="Harap pilih" value="true">
+                          <label for="quest" class="form-check-label">Ya, saya di Yogayakarta.</label>
+                        </div>
+                        <div class="col-md-6 form-check-inline">
+                          <input id="form_quest" type="radio" name="quest" class="form-check-input" required="required" data-error="Harap pilih">
+                          <label for="quest" class="form-check-label">Tidak, sudah pergi.</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_negara">Negara</label>
+                          <form autocomplete="off" action="#">
+                            <input id="myInput" type="text" name="myCountry" class="form-control" placeholder="Negara">
+                          </form>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_provinsi">Provinsi *</label>
+                          <input id="form_provinsi" type="text" name="provinsi" class="form-control" required="required" data-error="Masukkan provinsi">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_kota">Kabupaten dan Kota *</label>
+                          <input id="form_kota" type="text" name="kota" class="form-control" required="required" data-error="Masukkan Kabupaten/Kota">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_kecamatan">Kecamatan *</label>
+                          <input id="form_kecamatan" type="text" name="kecamatan" class="form-control" required="required" data-error="Masukkan Kecamatan">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_pos">Kode Pos *</label>
+                          <input id="form_pos" type="text" name="pos" class="form-control" required="required" data-error="Masukkan Kabupaten/Kota">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_jalan">Nama Jalan/Gedung/No Rumah *</label>
+                          <input id="form_jalan" type="text" name="jalan" class="form-control" required="required" data-error="Masukkan Kecamatan">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_no">No Telp/WA *</label>
+                            <input id="form_no" type="tel" name="no" class="form-control" placeholder="(999)-99999999" required="required" data-error="Masukkan Kabupaten/Kota">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_email">Email</label>
+                            <input id="form_email" type="text" name="email" class="form-control" placeholder="example@domain.com" required="required" >
+                          </div>
+                        </div>
+                      </div>
+                    <br>
+                    <div class="col-md-12" style="text-align: center;">
+                      <input type="submit" class="btn btn-send pt-2 btn-block" style="background-color: #007bff; border-color: #007bff; color: white;" value="Kirim">
+                      <br>
+                      <a href="../index.html">Kembali ke Website</a>
+                    </div>
+                  </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- /.8 -->
+      </div>
+      <!-- /.row-->
+    </div>
+    </div>
+    <!--JS-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/country.js"></script>
+  </body>
+</html>
