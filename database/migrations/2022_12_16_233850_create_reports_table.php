@@ -27,7 +27,7 @@ class CreateReportsTable extends Migration
             $table->string('location_name', 191);
             $table->string('detail_location', 191);
             $table->smallInteger('still_yogyakarta');
-            $table->string('image', 191);
+            $table->string('image', 191)->nullable();
             $table->string('status', 191);
             $table->timestamps();
         });

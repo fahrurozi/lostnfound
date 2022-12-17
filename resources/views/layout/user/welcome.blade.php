@@ -5,5 +5,5 @@
 @endsection
 
 @section('make_report')
-report/report.html
+{{route('report.create_report')}}
 @endsection

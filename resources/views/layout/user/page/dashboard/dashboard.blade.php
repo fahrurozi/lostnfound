@@ -1,3 +1,6 @@
+<?php 
+use Carbon\Carbon;
+?>
 @extends('layout.user.page.dashboard.dashboardtemplate')
 
 @section('profile')
@@ -113,17 +116,23 @@
                                     <th>Waktu</th>
                                     <th>Proses</th>
                                 </tr>
+                                @foreach($list_report as $report)
                                 <tr>
-                                    <td>Laptop</td>
-                                    <td>Acer Extension 15</td>
-                                    <td>Hitam</td>
-                                    <td>Di dalam tas batik</td>
-                                    <td>Musholla</td>
-                                    <td>15:00</td>
+                                    <td>{{$report->product_type}}</td>
+                                    <td>{{$report->brand}}</td>
+                                    <td>{{$report->color}}</td>
+                                    <td>{{$report->description}}</td>
+                                    <td>{{$report->location}} - {{$report->location_name}}</td>
+                                    <td>{{Carbon::parse($report->missing_date)->format('d-m-Y')}} - {{$report->clock}}</td>
                                     <td>
-                                        <strong style="color: greenyellow;">On Progress</strong>
+                                        @if($report->status == 'lost')
+                                        <strong style="color: red;">On Progress</strong>
+                                        @elseif($report->status == 'found')
+                                        <strong style="color: green;">Found</strong>
+                                        @endif
                                     </td>
                                 </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>

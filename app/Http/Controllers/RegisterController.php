@@ -13,22 +13,28 @@ class RegisterController extends Controller
     //
     public function login()
     {
-        
+
         if (session()->get('user.id') == null) {
             return $this->__view('login');
         }
         return $this->__view('login');
     }
 
-    public function post_login(Request $request){
+    public function post_login(Request $request)
+    {
         $user = User::where('email', $request->email)->first();
         if ($user) {
             if ($user->password == $request->password) {
                 $request->session()->put('user.id', $user->id);
-                return redirect()->route('dashboard.index');
+                if ($user->role == 'USER') {
+                    return redirect()->route('dashboard.index');
+                } else if ($user->role == 'ADMIN') {
+                    return redirect()->route('admin.dashboard');
+                }
             }
         }
-        return redirect()->route('login.index')->withErrors('Email atau password salah');
+
+        return redirect()->route('login.index')->with('error', 'Email atau password salah');
     }
 
     public function register()
@@ -52,10 +58,11 @@ class RegisterController extends Controller
 
         $request->session()->put('user.id', $user->id);
 
-        return redirect()->route('dashboard.index');
+        return redirect()->route('dashboard.index')->with('success', 'Registrasi berhasil');
     }
 
-    public function logout(){
+    public function logout()
+    {
         Session::flush();
         return redirect()->route('welcome');
     }

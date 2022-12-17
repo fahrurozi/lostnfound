@@ -42,7 +42,7 @@
               <a class="nav-link scrollto active" href="{{route('welcome')}}">Back to Website</a>
             </li>
             <li>
-              <a class="getstarted scrollto" href="../report/report.html">Reporting Form</a>
+              <a class="getstarted scrollto" href="{{route('report.create_report')}}">Reporting Form</a>
             </li>
             <li>
               <a class="getstarted scrollto" href="{{route('logout')}}">Logout</a>
