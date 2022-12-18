@@ -380,7 +380,7 @@
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
-                  <a href="report/report.html">Buat Laporan</a>
+                  <a href="@yield('make_report')">Buat Laporan</a>
                 </li>
               </ul>
             </div>

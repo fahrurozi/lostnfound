@@ -401,8 +401,8 @@
                             <br>Kota Yogyakarta, Yogyakarta 55212
                             <br>
                             <br>
-                            <strong>Phone:</strong> 027445646 <br>
-                            <strong>Email:</strong> humasda6@kai.id <br>
+                            <strong>Phone:</strong> 0274696969 <br>
+                            <strong>Email:</strong> kelompok1yogyakarta@mail.com <br>
                         </p>
                     </div>
                     <div class="col-lg-4 col-md-6 footer-links">
@@ -430,7 +430,7 @@
                             </li>
                             <li>
                                 <i class="bx bx-chevron-right"></i>
-                                <a href="report/report.html">Buat Laporan</a>
+                                <a href="@yield('make_report')">Buat Laporan</a>
                             </li>
                         </ul>
                     </div>
