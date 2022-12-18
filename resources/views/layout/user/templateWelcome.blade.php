@@ -57,7 +57,7 @@
                         @if(session()->get('user.id') == null)
                         <a class="getstarted scrollto" href="@yield('login')">Login</a>
                         @else
-                        <a class="getstarted scrollto" href="{{route('logout')}}">Logout</a>
+                        <a class="getstarted scrollto" href="{{route('dashboard.index')}}">Dashboard</a>
                         @endif
 
                     </li>

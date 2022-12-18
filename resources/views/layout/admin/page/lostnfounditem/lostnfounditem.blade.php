@@ -67,16 +67,75 @@ use Carbon\Carbon;
                                         </td>
                                         <td>{{$item->user->name}}</td>
                                         <td>
+                                            <a href="#detailModal{{$item->id}}" data-toggle="modal">
+                                                <i class="fas fa-eye" data-toggle="tooltip"></i>
+                                            </a>
                                             <a href="{{route('admin.lostnfounditem.edit_data', $item->id)}}"
                                                 class="edit">
                                                 <i class="far fa-edit fa-sm" title="Edit"></i>
                                             </a>
-                                            <a href="#deleteEmployeeModal{{$item->id}}" class="delete" data-toggle="modal">
+                                            <a href="#deleteEmployeeModal{{$item->id}}" class="delete"
+                                                data-toggle="modal">
                                                 <i class="far fa-trash-alt fa-sm" data-toggle="tooltip"
                                                     title="Delete"></i>
                                             </a>
                                         </td>
                                     </tr>
+
+                                    <div class="modal fade" id="detailModal{{$item->id}}" role="dialog">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">User Details</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-4" style="border-color: black">
+                                                                Nama
+                                                            </div>
+                                                            <div class="col-8">
+                                                                {{$item->user->name}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                Alamat
+                                                            </div>
+                                                            <div class="col-8">
+                                                                {{$item->user->address}}, {{$item->user->district}},
+                                                                {{$item->user->city}}, {{$item->user->province}},
+                                                                {{$item->user->country}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                Email
+                                                            </div>
+                                                            <div class="col-8">
+                                                                {{$item->user->email}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                No Telp
+                                                            </div>
+                                                            <div class="col-8">
+                                                                {{$item->user->phone}}
+                                                            </div>
+                                                        </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div id="deleteEmployeeModal{{$item->id}}" class="modal fade">
                                         <div class="modal-dialog">
