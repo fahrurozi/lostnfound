@@ -24,7 +24,7 @@
 						@yield('content')
 					</div>
 					<div class="footer">
-						Copyright &copy; 2022 &mdash; PT KAI DAOP 6 Yogyakarta
+						Copyright &copy; 2022 &mdash; Kelompok 1 Yogyakarta
 					</div>
 				</div>
 			</div>

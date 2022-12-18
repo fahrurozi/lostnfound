@@ -51,9 +51,9 @@ use Carbon\Carbon;
                                     @foreach($lostnfounditem as $item)
                                     <tr>
                                         @if($item->status == 'lost')
-                                        <td><strong style="color: red;">On Progress</strong></td>
+                                        <td><strong style="color: red;">unclaimed</strong></td>
                                         @elseif($item->status == 'found')
-                                        <td><strong style="color: green;">Found</strong></td>
+                                        <td><strong style="color: green;">claimed</strong></td>
                                         @endif
                                         <td>{{$item->user->name}}</td>
                                         <td>{{$item->product_type}}</td>

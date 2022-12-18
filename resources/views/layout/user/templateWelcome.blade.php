@@ -401,7 +401,7 @@
                             <br>Kota Yogyakarta, Yogyakarta 55212
                             <br>
                             <br>
-                            <strong>Phone:</strong> 0274512056 <br>
+                            <strong>Phone:</strong> 027445646 <br>
                             <strong>Email:</strong> humasda6@kai.id <br>
                         </p>
                     </div>
@@ -463,7 +463,7 @@
         </div>
         <div class="container footer-bottom clearfix">
             <div class="copyright"> &copy; Copyright <strong>
-                    <span>PT KAI DAOP 6 Yogyakarta</span>
+                    <span>Kelompok 1 Yogyakarta</span>
                 </strong>. All Rights Reserved </div>
         </div>
     </footer>

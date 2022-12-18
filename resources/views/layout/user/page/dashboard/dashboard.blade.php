@@ -126,9 +126,9 @@ use Carbon\Carbon;
                                     <td>{{Carbon::parse($report->missing_date)->format('d-m-Y')}} - {{$report->clock}}</td>
                                     <td>
                                         @if($report->status == 'lost')
-                                        <strong style="color: red;">On Progress</strong>
+                                        <strong style="color: red;">unclaimed</strong>
                                         @elseif($report->status == 'found')
-                                        <strong style="color: green;">Found</strong>
+                                        <strong style="color: green;">claimed</strong>
                                         @endif
                                     </td>
                                 </tr>
