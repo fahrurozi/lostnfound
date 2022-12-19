@@ -84,8 +84,8 @@ use Carbon\Carbon;
                                     <label for="form_kategori">Status</label>
                                     <select id="form_kategori" name="status" class="form-control" required="required"
                                         data-error="Please specify your need.">
-                                        <option value="lost" {{($lostnfounditem->status=='lost')?"selected":""}}>on progress</option>
-                                        <option value="found" {{($lostnfounditem->status=='found')?"selected":""}}>found</option>
+                                        <option value="lost" {{($lostnfounditem->status=='lost')?"selected":""}}>unclaimed</option>
+                                        <option value="found" {{($lostnfounditem->status=='found')?"selected":""}}>claimed</option>
                                     </select>
                                 </div>
                                 <button class="btn btn-success" type="submit">Submit</button>
