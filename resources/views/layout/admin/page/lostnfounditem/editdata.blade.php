@@ -49,9 +49,9 @@ use Carbon\Carbon;
                                 <tbody>
                                     <tr>
                                         @if($lostnfounditem->status == 'lost')
-                                        <td><strong style="color: red;">On Progress</strong></td>
+                                        <td><strong style="color: red;">unclaimed</strong></td>
                                         @elseif($lostnfounditem->status == 'found')
-                                        <td><strong style="color: green;">Found</strong></td>
+                                        <td><strong style="color: green;">claimed</strong></td>
                                         @endif
                                         <td>{{$lostnfounditem->user->name}}</td>
                                         <td>{{$lostnfounditem->product_type}}</td>
